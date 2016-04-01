@@ -6,7 +6,7 @@ alphabet = "abcdefghijklmnopqrstuvwxyz"
 
 def genRandom(chars, length):
 	rndAlphabet = ""
-	for x in range(1, length):
+	for x in range(0, length):
 		rndAlphabet = rndAlphabet + random.choice(alphabet)	
 		
 	return rndAlphabet
