@@ -1,5 +1,7 @@
 import gi
 import random
+import string
+
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 
@@ -22,7 +24,7 @@ class MyWindow(Gtk.Window):
 
     def on_button_clicked(self, widget):
 
-        rnd_alphabet = gen_random('abcdefghijklmnopqrstuvwxyz', 8)
+        rnd_alphabet = gen_random(string.printable, 8)
         print(rnd_alphabet)
 
 
