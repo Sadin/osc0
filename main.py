@@ -3,12 +3,10 @@ import random
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 
-alphabet = "abcdefghijklmnopqrstuvwxyz"
-
 def gen_random(chars, length):
     rnd_alphabet = ""
     for x in range(0, length):
-        rnd_alphabet += random.choice(alphabet)	
+        rnd_alphabet += random.choice(chars)	
 
     return rnd_alphabet
 
