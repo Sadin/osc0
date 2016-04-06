@@ -1,0 +1,2 @@
+def wavegen(amplitude, step):
+	

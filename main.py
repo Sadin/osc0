@@ -2,6 +2,7 @@ import gi
 import random
 import string
 import math
+from wavegen import wavegen
 
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
