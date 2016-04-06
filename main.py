@@ -19,15 +19,28 @@ class MyWindow(Gtk.Window):
 
     def __init__(self):
         Gtk.Window.__init__(self, title="osc0")
-    
+
+        self.set_size_request(200, 100)
+
+        vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=6)
+        self.add(vbox)
+
+        self.entry = Gtk.Entry()
+        self.entry.set_text("")
+        self.entry.set_editable(False)
+        vbox.pack_start(self.entry, True, True, 0)
+
+        hbox = Gtk.Box(spacing=4)
+        vbox.pack_start(hbox, True, True, 0)
 
         self.button = Gtk.Button(label="Gen Random")
         self.button.connect("clicked", self.on_button_clicked)
-        self.add(self.button)
+        vbox.pack_start(self.button, True, True, 0)
 
     def on_button_clicked(self, widget):
 
         rnd_alphabet = gen_random(string.printable, 8)
+        self.entry.set_text(rnd_alphabet)
         print(rnd_alphabet)
 
 
