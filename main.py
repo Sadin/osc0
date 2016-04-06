@@ -2,7 +2,7 @@ import gi
 import random
 import string
 import math
-from wavegen import wavegen
+#from wavegen import wavegen
 
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
@@ -18,9 +18,10 @@ class MyWindow(Gtk.Window):
 
 
     def __init__(self):
-        Gtk.Window.__init__(self, title="Hello World")
+        Gtk.Window.__init__(self, title="osc0")
+        self.set_size_request(300, 200)
 
-        self.button = Gtk.Button(label="Click Here")
+        self.button = Gtk.Button(label="Gen Random")
         self.button.connect("clicked", self.on_button_clicked)
         self.add(self.button)
 
