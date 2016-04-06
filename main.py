@@ -5,7 +5,7 @@ import math
 #from wavegen import wavegen
 
 gi.require_version('Gtk', '3.0')
-from gi.repository import Gtk
+from gi.repository import Gtk, GObject
 
 def gen_random(chars, length):
     rnd_alphabet = ""
@@ -19,7 +19,7 @@ class MyWindow(Gtk.Window):
 
     def __init__(self):
         Gtk.Window.__init__(self, title="osc0")
-        self.set_size_request(300, 200)
+    
 
         self.button = Gtk.Button(label="Gen Random")
         self.button.connect("clicked", self.on_button_clicked)
